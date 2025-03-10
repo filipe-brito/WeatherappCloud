@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Previsão do Tempo</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <header>
+            
+        </header>
+
+        <main>
+            <h1 id="title">Previsão do Tempo</h1>
+            
+            <!-- PAINEL COM OS ELEMENTOS PARA BUSCAR A PREVISÃO -->
+            <section id="search-section">
+                <input type="text" id="city" placeholder="Digite o nome da cidade">
+                <button id="fetch-button">Buscar previsão</button>
+            </section>
+
+            <!-- DASHBOARD QUE CONTÉM A PREVISÃO ATUAL, SELETOR DE DIAS E OS CARDS HORÁRIOS -->
+            <div id="result-box">
+                <section id="message-box">
+                    <p>Digite uma cidade</p>
+                </section>
+
+                <!-- TABELA COM AS PREVISÕES -->
+                 <section id="forecasts-table" style="display: none">
+                    <!-- PEQUENO PAINEL PARA MOSTRAR O PAÍS E A CIDADE PESQUISADA -->
+                    <article id="city-researched">
+                        <h2>City, Country</h2>
+                    </article>
+                    
+                    <!-- CÉLULA COM A PREVISÃO ATUAL -->
+                    <section id="current-day-cell">
+                        <h2>HOJE</h2>
+                        <p>Month and day</p>
+                        <p class="temp">Temp: --°C</p>
+                    </section>
+
+                    <div id="other-forecasts">
+                            <!-- SELETOR DE DIA -->
+                        <nav id="day-selector">
+                            <button class="day">
+                                <h2>WEEKDAY</h2>
+                                <h3>month and day</h3>
+                            </button>
+                            <button class="day">
+                                <h2>WEEKDAY</h2>
+                                <h3>month and day</h3>
+                            </button>
+                            <button class="day">
+                                <h2>WEEKDAY</h2>
+                                <h3>month and day</h3>
+                            </button>
+                            <button class="day">
+                                <h2>WEEKDAY</h2>
+                                <h3>month and day</h3>
+                            </button>
+                        </nav>
+
+                        <!-- CÉLULAS DOS HORÁRIOS -->
+                        <section id="hourly-cells">
+                            <article class="hourly-cell">
+                                <h2>hour</h2>
+                                <p class="temp">Temp°</p>
+                            </article>
+                            <article class="hourly-cell">
+                                <h2>hour</h2>
+                                <p class="temp">Temp°</p>
+                            </article>
+                            <article class="hourly-cell">
+                                <h2>hour</h2>
+                                <p class="temp">Temp°</p>
+                            </article>
+                            <article class="hourly-cell">
+                                <h2>hour</h2>
+                                <p class="temp">Temp°</p>
+                            </article>
+                            <article class="hourly-cell">
+                                <h2>hour</h2>
+                                <p class="temp">Temp°</p>
+                            </article>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Importa o JavaScript no final do body -->
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

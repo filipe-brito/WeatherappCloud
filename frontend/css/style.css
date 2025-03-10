@@ -1,0 +1,215 @@
+@font-face {
+    font-family: '8bitArcade1';
+    src: url('../assets/fonts/8-bit Arcade In.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FippsRegular';
+    src: url('../assets/fonts/Fipps-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GumballThickWires';
+    src: url('../assets/fonts/Gumball_Thick_Wires.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PixelifySansMedium';
+    src: url('../assets/fonts/PixelifySans-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PixelifySansRegular';
+    src: url('../assets/fonts/PixelifySans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Pixeled';
+    src: url('../assets/fonts/Pixeled.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'VT323';
+    src: url('../assets/fonts/VT323-Regular.ttf') format('truetype');
+}
+
+body{
+    background: linear-gradient(to top left, #010101, #5F2BE8);
+    font-family: 'PixelifySansMedium';
+}
+
+main{
+    width: 80%; /* Ocupar 80% da largura da página */
+    height: 100vh;
+    padding-top: 5vh;
+    margin: 0 auto; /* Centralizar horizontalmente */
+    text-align: center; 
+    color: white;
+}
+
+#title{
+    font-family: 'FippsRegular';
+    color: yellow;
+    font-weight: normal;
+}
+
+#search-section{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Bordas arredondadas com raio de 10 pixels */
+    gap: 5px;
+}
+#search-section #city{
+    height: 50%;
+    width: 30%;
+    font-family: 'PixelifySansRegular';
+    font-size: 18px;
+    border-radius: 10px; /* Bordas arredondadas com raio de 10 pixels */
+    padding: 0 5px;
+}
+#search-section #fetch-button{
+    height: 40%;
+    width: 20%;
+    font-family: 'PixelifySansRegular';
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px; /* Bordas arredondadas com raio de 10 pixels */
+    border: none;
+    background-color: #8FDE5E;
+    color: white;
+    font-weight: normal;
+}
+#search-section #fetch-button:hover{
+    background-color: #53DE5E;
+    cursor: pointer;
+}
+
+#result-box{
+    margin: 0 auto; /* Centralizar horizontalmente */
+    width: 90%;
+    height: 50vh; /* Deixa o elemento com 50% do tamanho da tela */
+}
+
+#result-box #message-box{
+    margin: 0 auto; /* Centralizar horizontalmente */
+    width: 60%;
+    height: 50%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 10px; /* Bordas arredondadas com raio de 10 pixels */
+}
+
+#forecasts-table{
+    display: flex; /* Ativa Flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+#result-box #forecasts-table .temp{
+    color: #1796C5;
+}
+
+#result-box #forecasts-table #city-researched{
+    font-size: 20px;
+    width: 100%;
+    height: 15%;
+    text-align: left;
+    font-weight: normal;
+}
+#result-box #forecasts-table #city-researched h2{
+    font-weight: normal;
+}
+#result-box #forecasts-table #current-day-cell{
+    width: 20%;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-radius: 10px; /* Bordas arredondadas com raio de 10 pixels */
+}
+#result-box #forecasts-table #current-day-cell:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#result-box #forecasts-table #current-day-cell h2{
+    text-align: center;
+    font-weight: normal;
+}
+#result-box #forecasts-table #current-day-cell p:nth-of-type(1){
+    font-family: 'VT323';
+    font-size: 25px;
+    font-weight: normal;
+}
+#result-box #forecasts-table #current-day-cell p{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#result-box #forecasts-table #other-forecasts{
+    width: 80%;
+    height: 85%;
+}
+
+#result-box #forecasts-table #other-forecasts #day-selector{
+    display: flex;
+    height: 20%;
+    padding: 0px 10px 5px 15px;
+    gap: 15px;
+}
+
+#result-box #forecasts-table #other-forecasts #day-selector .day{
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 25%;
+    height: 100%;
+    border-radius: 10px; /* Bordas arredondadas com raio de 10 pixels */
+    border-color: transparent;
+    font-weight: normal;
+}
+#result-box #forecasts-table #other-forecasts #day-selector .day:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#result-box #forecasts-table #other-forecasts #day-selector .day h2{
+    font-family: 'PixelifySansMedium';
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+    font-weight: normal;
+} 
+#result-box #forecasts-table #other-forecasts #day-selector .day h3{
+    font-family: 'VT323';
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+    font-weight: normal;
+}
+
+#result-box #forecasts-table #other-forecasts #hourly-cells{
+    height: 80%;
+    display: flex; /* Coloca os elementos na mesma linha */
+    justify-content: space-around;
+    padding: 0 0 0 5px;
+    gap: 10px;
+}
+
+#result-box #forecasts-table #other-forecasts #hourly-cells .hourly-cell{
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 20%;
+    height: 100%;
+    border-radius: 10px; /* Bordas arredondadas com raio de 10 pixels */
+}
+#result-box #forecasts-table #other-forecasts #hourly-cells .hourly-cell h2{
+    font-weight: normal;
+}
+#result-box #forecasts-table #other-forecasts #hourly-cells .hourly-cell p{
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.selected {
+    outline: 3px solid yellow;
+}
