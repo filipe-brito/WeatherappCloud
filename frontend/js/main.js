@@ -14,7 +14,7 @@ let weatherData = null;
 document.getElementById("fetch-button").addEventListener("click", async () => {
     const city = document.getElementById("city").value.trim();
     if(!city ){
-        document.getElementById("message-box").innerText = `ERRO!\n\nCiade não pode estar vazia.`;
+        document.getElementById("message-box").innerText = `ERRO!\n\nCidade não pode estar vazia.`;
         return;
     }
     weatherData = await API.fetchWeather(city);
