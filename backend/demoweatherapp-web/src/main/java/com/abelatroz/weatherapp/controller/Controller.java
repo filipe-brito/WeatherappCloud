@@ -16,7 +16,7 @@ import com.abelatroz.weatherapp.service.WeatherService;
 import com.abelatroz.weatherapp.service.WeatherServiceUtilities;
 
 @RestController // Define que esta classe é um Controller REST (responde com JSON)
-@RequestMapping("/api/weather") // Define a URL base para as requisições
+@RequestMapping("/backend") // Define a URL base para as requisições
 @CrossOrigin(origins = "*") // Permite que o frontend acesse a API
 public class Controller {
 

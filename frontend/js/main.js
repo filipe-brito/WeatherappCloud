@@ -27,6 +27,7 @@ document.getElementById("fetch-button").addEventListener("click", async () => {
     } else {
         document.getElementById("message-box").style.display = "none";
         document.getElementById("forecasts-table").style.display = "flex";
+	console.log(weatherData);
         UI.updateCityAndCountry(`${weatherData.city.name}, ${weatherData.city.country}`);
         UI.updateTodayCell(weatherData);
         UI.updateDaySelector(weatherData);
